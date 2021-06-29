@@ -12,17 +12,16 @@ let simpsons = [
 function App() {
     return (
         <div>
-            <Simpson/>
 
-            {/*{*/}
-            {/*    simpsons.map(value =>*/}
-            {/*        <div>*/}
-            {/*            <h2>{value.name} {value.surname} age - {value.age}</h2>*/}
-            {/*            <img src={value.photo} alt=""/>*/}
-            {/*            <div>{value.info}</div>*/}
-
-            {/*        </div>)*/}
-            {/*}*/}
+            {
+                simpsons.map(value =>  <Simpson item = {value}/>)
+                    // <div>
+                    //     <h2>{value.name} {value.surname} age - {value.age}</h2>
+                    //     <img src={value.photo} alt=""/>
+                    //     <div>{value.info}</div>
+                    //
+                    // </div>)
+            }
 
         </div>
     );
