@@ -1,4 +1,4 @@
-export default  function Simpson(props) {
+export default  function Simpson({item:{name, surname, age, photo, info}}) {
 
     // let {item} = props;
     // let {name, surname, age, photo, info} = item;
@@ -6,7 +6,9 @@ export default  function Simpson(props) {
     // let {item:{name, surname, age, photo, info}} = props;
     //тем самым еще сокращая код
 
-    let {item:{name, surname, age, photo, info}} = props;
+
+    //переносим єту часть {item:{name, surname, age, photo, info}} в первую строку вместо props
+    //let {item:{name, surname, age, photo, info}} = props;
 
     return(
         <div>
