@@ -1,5 +1,6 @@
 import './App.css';
-import Simpson from "./components/simpson/Simpson";  //путь откуда импортируем(получаем данніе)
+import Simpson from "./components/simpson/Simpson";
+import Menu from "./components/menu/Menu";  //путь откуда импортируем(получаем данніе)
 
 let simpsons = [
     {name: 'Bart', surname: 'Simpson', age: 10 ,info: '10-летний сын Гомера и Мардж, старший ребёнок в семье. Любит кататься на скейте, читать комиксы. Является источником проблем для окружающих. Как и многие другие персонажи шоу, Барт — левша', photo:'https://upload.wikimedia.org/wikipedia/ru/2/29/Bart_Simpson.gif'},
@@ -12,12 +13,15 @@ let simpsons = [
 function App() {
     return (
         <div>
+            <Menu/>
+            <div className={'wrap'}>
 
             {
-                simpsons.map(value =>  <Simpson item = {value}/>)
+                simpsons.map(value => <Simpson item={value}/>)
 
             }
 
+            </div>
         </div>
     );
 }
