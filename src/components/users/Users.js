@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import './Users.css'
 
 export default function Users(){
 
@@ -17,7 +18,7 @@ export default function Users(){
        }, []);
 
     return(
-        <div>
+        <div className={'usWrap'}>
             {
                 usersList.map(value => <div>{value.id} - {value.name}</div>)
             }
